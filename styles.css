@@ -252,11 +252,6 @@ ol li .title {
   margin-top: 20px; /* Adjust as needed */
   margin-bottom: 20px; /* Adjust as needed */
 }
-.card-list li {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease, transform 0.6s ease;
-}
 
 .card-list li.fade-in {
   opacity: 1;
@@ -276,8 +271,9 @@ ol li .title {
 }
 
 .submit-button:hover {
-  background-color: #218838;
+  background-color: darkgreen;
 }
+
 .reset-button {
   background-color: red;
   color: white;
@@ -289,4 +285,27 @@ ol li .title {
 
 .reset-button:hover {
   background-color: darkred;
+}
+.print-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.print-button:hover {
+  background-color: #0056b3;
+}
+
+.print-button:active {
+  transform: scale(0.95);
+}
+
+.print-button i {
+  margin-right: 5px;
 }
