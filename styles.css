@@ -60,35 +60,41 @@
   height: auto;
   max-width: 100%;
   display: none;
+  transition: transform 0.3s ease; /* Tambahkan transisi untuk smooth effect */
 }
 
 .img-slideshow:first-of-type {
   display: block;
+}
+.slide:hover .img-slideshow {
+  display: block;
+  transform: scale(1.02); /* Menggunakan scale untuk zoom-in yang lebih kecil */
 }
 
 .slideshow-button {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Ubah opacity agar lebih terlihat */
   color: white;
   border: none;
   padding: 8px 16px;
   cursor: pointer;
+  z-index: 1; /* Menempatkan tombol di atas gambar */
+  transition: background-color 0.3s ease;
 }
 
 .slideshow-button:hover {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 0, 0, 0.9); /* Efek hover lebih pekat */
 }
 
 .slideshow-button:nth-of-type(1) {
-  left: 0;
+  left: 10px; /* Mengatur posisi dari sisi kiri */
 }
 
 .slideshow-button:nth-of-type(2) {
-  right: 0;
+  right: 10px; /* Mengatur posisi dari sisi kanan */
 }
-
 .container {
   display: flex;
   flex-wrap: wrap;
@@ -139,11 +145,18 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7); /* Warna latar belakang price tag */
   color: white;
   padding: 5px 10px;
   font-size: 14px;
   border-radius: 4px;
+  z-index: 1; /* Menempatkan price tag di atas gambar */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Tambahkan transisi untuk smooth effect */
+}
+
+/* Gaya tambahan saat hover untuk price tag */
+.slide:hover .price-tag {
+  background-color: rgba(0, 0, 0, 0.9); /* Efek hover pada background color */
 }
 
 @import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
@@ -216,7 +229,8 @@ ol li > * {
 
 ol li .title {
   font-size: 4rem;
-  font-weight: 500;
+  font-weight: 400;
+  padding-left: 22px;
 }
 
 .icon {
@@ -237,4 +251,42 @@ ol li .title {
   border-top: 2px solid black;
   margin-top: 20px; /* Adjust as needed */
   margin-bottom: 20px; /* Adjust as needed */
+}
+.card-list li {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.card-list li.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+.a {
+  width: 150px; /* Atur lebar sesuai kebutuhan */
+}
+
+.submit-button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+}
+.reset-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.reset-button:hover {
+  background-color: darkred;
 }

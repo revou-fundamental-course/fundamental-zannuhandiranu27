@@ -10,17 +10,17 @@
     <header class="header-wrapper">
       <img src="https://seeklogo.com/images/Y/yamaha-xsr-logo-E2BDE61814-seeklogo.com.png" alt="logo" class="logo" />
       <div class="menu">
-        <button>Home</button>
-        <button onclick="scrollToSection('motorcycle')">Motorcycle</button>
-        <button onclick="scrollToSection('headquarters')">Headquarters</button>
-        <button onclick="scrollToSection('form')">Form</button>
+        <button><i class="fas fa-home"></i> Beranda</button>
+        <button onclick="scrollToSection('motorcycle')"><i class="fas fa-motorcycle"></i> Sepeda Motor</button>
+        <button onclick="scrollToSection('headquarters')"><i class="fas fa-building"></i> Kantor Pusat</button>
+        <button onclick="scrollToSection('form')"><i class="fas fa-file-alt"></i> Formulir</button>
       </div>
     </header>
 
     <main class="main-content" id="motorcycle">
-      <h3><span id="nama">Welcome to XSR shop</span></h3>
-      <input type="text" id="userName" placeholder="Enter your name" />
-      <button onclick="updateName()">Submit</button>
+      <h3><span id="nama">Selamat datang di Toko XSR</span></h3>
+      <input type="text" id="userName" placeholder="Masukkan nama Anda" />
+      <button onclick="updateName()">Kirim</button>
       <div class="slideshow-container">
         <div class="slideshow-wrapper">
           <div class="slide">
@@ -44,12 +44,12 @@
             <div class="price-tag">Rp 39.000.000</div>
           </div>
         </div>
-        <button class="slideshow-button" onclick="plusDivs(-1)">Previous</button>
-        <button class="slideshow-button" onclick="plusDivs(1)">Next</button>
+        <button class="slideshow-button" onclick="plusDivs(-1)">Sebelumnya</button>
+        <button class="slideshow-button" onclick="plusDivs(1)">Berikutnya</button>
       </div>
     </main>
 
-    <h1 id="headquarters">Headquarters</h1>
+    <h1 id="headquarters">Kantor Pusat</h1>
     <ol class="card-list">
       <li>
         <div class="icon"><img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/692/2023/09/14/2633584284-3702441137.jpg" alt="Jakarta" /></div>
@@ -64,17 +64,17 @@
         <div class="title">Surabaya</div>
       </li>
     </ol>
-    <div class="separator"></div>
 
+    <div class="separator"></div>
     <div class="container" id="form">
       <div class="form-container">
-        <h2>Form Pembelian</h2>
+        <h2>Formulir Pembelian</h2>
         <form id="dataForm">
           <table>
             <tr>
               <td>Nama Pembeli</td>
               <td>:</td>
-              <td><input id="name" class="a" type="text" placeholder="Name" required /></td>
+              <td><input id="name" class="a" type="text" placeholder="Nama" required /></td>
             </tr>
             <tr>
               <td>Nomor HP</td>
@@ -84,7 +84,7 @@
             <tr>
               <td>Tanggal Pemesanan</td>
               <td>:</td>
-              <td><input id="dob" class="a" type="date" placeholder="Date" required /></td>
+              <td><input id="dob" class="a" type="date" placeholder="Tanggal" required /></td>
             </tr>
             <tr>
               <td>Warna</td>
@@ -104,13 +104,16 @@
               <td><textarea id="message" class="d" cols="30" rows="10" required></textarea></td>
             </tr>
             <tr>
-              <td colspan="3"><input class="a" type="submit" value="Kirim" /></td>
+              <td colspan="3">
+                <input class="a submit-button" type="submit" value="Kirim" />
+                <button type="button" class="reset-button" onclick="resetForm()"><i class="fas fa-trash"></i> Hapus</button>
+              </td>
             </tr>
           </table>
         </form>
       </div>
       <div class="result-container" id="resultContainer">
-        <h2>Print</h2>
+        <h2>Hasil Pencetakan</h2>
         <div id="result"></div>
       </div>
     </div>

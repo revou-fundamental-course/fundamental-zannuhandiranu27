@@ -76,3 +76,23 @@ function showDivs(n) {
   imgList[slideIndex - 1].style.display = "block";
   priceTags[slideIndex - 1].style.display = "block";
 }
+
+function resetForm() {
+  document.getElementById("dataForm").reset(); // Reset form input
+  document.getElementById("result").innerHTML = ""; // Kosongkan hasil print
+  document.getElementById("resultContainer").classList.remove("show"); // Sembunyikan container hasil
+}
+// Dapatkan semua elemen li pada .card-list
+const cardItems = document.querySelectorAll(".card-list li");
+
+// Fungsi untuk menambahkan class fade-in ke setiap li secara bertahap
+function fadeInCards() {
+  cardItems.forEach((item, index) => {
+    setTimeout(() => {
+      item.classList.add("fade-in");
+    }, index * 200); // Tambahkan delay bertahap antara masing-masing item
+  });
+}
+
+// Panggil fungsi fadeInCards saat halaman dimuat
+window.addEventListener("load", fadeInCards);
