@@ -38,7 +38,15 @@ document.getElementById("dataForm").addEventListener("submit", function (e) {
     
             `;
 });
+function updateName() {
+  const userName = document.getElementById("userName").value;
+  document.getElementById("nama").textContent = `Hi ${userName}, Welcome to XSR shop`;
+  document.getElementById("nameInputContainer").style.display = "none";
+}
 
+function scrollToSection(sectionId) {
+  document.getElementById(sectionId).scrollIntoView({ behavior: "smooth" });
+}
 function formatDate(dateString) {
   const options = { year: "numeric", month: "long", day: "numeric" };
   const date = new Date(dateString);

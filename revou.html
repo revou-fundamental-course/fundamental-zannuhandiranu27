@@ -11,14 +11,16 @@
       <img src="https://seeklogo.com/images/Y/yamaha-xsr-logo-E2BDE61814-seeklogo.com.png" alt="logo" class="logo" />
       <div class="menu">
         <button>Home</button>
-        <button>My Profile</button>
-        <button>Portfolio</button>
-        <button>Message Us</button>
+        <button onclick="scrollToSection('motorcycle')">Motorcycle</button>
+        <button onclick="scrollToSection('headquarters')">Headquarters</button>
+        <button onclick="scrollToSection('form')">Form</button>
       </div>
     </header>
 
-    <main class="main-content">
-      <h3>Hi <span id="nama">Welcome to XSR shop</span></h3>
+    <main class="main-content" id="motorcycle">
+      <h3><span id="nama">Welcome to XSR shop</span></h3>
+      <input type="text" id="userName" placeholder="Enter your name" />
+      <button onclick="updateName()">Submit</button>
       <div class="slideshow-container">
         <div class="slideshow-wrapper">
           <div class="slide">
@@ -47,7 +49,7 @@
       </div>
     </main>
 
-    <h1>Headquarters</h1>
+    <h1 id="headquarters">Headquarters</h1>
     <ol class="card-list">
       <li>
         <div class="icon"><img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/692/2023/09/14/2633584284-3702441137.jpg" alt="Jakarta" /></div>
@@ -64,7 +66,7 @@
     </ol>
     <div class="separator"></div>
 
-    <div class="container">
+    <div class="container" id="form">
       <div class="form-container">
         <h2>Form Pembelian</h2>
         <form id="dataForm">
