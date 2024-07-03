@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulir Pembelian</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header-wrapper">
+      <img src="https://seeklogo.com/images/Y/yamaha-xsr-logo-E2BDE61814-seeklogo.com.png" alt="logo" class="logo" />
+      <div class="menu">
+        <button>Home</button>
+        <button>My Profile</button>
+        <button>Portfolio</button>
+        <button>Message Us</button>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <h3>Hi <span id="nama">Welcome to XSR shop</span></h3>
+      <div class="slideshow-container">
+        <div class="slideshow-wrapper">
+          <div class="slide">
+            <img
+              class="img-slideshow"
+              src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full/catalog-image/MTA-57654990/yamaha_yamaha_all_new_xsr_155_sepeda_motor_-otr_jabodetabekser-_full04_u7se3bix.jpg"
+              alt="XSR Motor - Biru"
+            />
+            <div class="price-tag">Rp 37.000.000</div>
+          </div>
+          <div class="slide">
+            <img
+              class="img-slideshow"
+              src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//catalog-image/MTA-128050568/yamaha_yamaha_all_new_xsr_155_sepeda_motor_-otr_jabodetabek-_full02_pbejkf8y.jpg"
+              alt="XSR Motor - Silver"
+            />
+            <div class="price-tag">Rp 38.000.000</div>
+          </div>
+          <div class="slide">
+            <img class="img-slideshow" src="https://www.static-src.com/wcsstore/Indraprastha/images/catalog/full//109/MTA-48846916/yamaha_yamaha_full01.jpg" alt="XSR Motor - Hitam" />
+            <div class="price-tag">Rp 39.000.000</div>
+          </div>
+        </div>
+        <button class="slideshow-button" onclick="plusDivs(-1)">Previous</button>
+        <button class="slideshow-button" onclick="plusDivs(1)">Next</button>
+      </div>
+    </main>
+
+    <h1>Headquarters</h1>
+    <ol class="card-list">
+      <li>
+        <div class="icon"><img src="https://assets.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/692/2023/09/14/2633584284-3702441137.jpg" alt="Jakarta" /></div>
+        <div class="title">Jakarta</div>
+      </li>
+      <li>
+        <div class="icon"><img src="https://static.promediateknologi.id/crop/0x0:0x0/750x500/webp/photo/p1/79/2024/05/11/FotoJet-2024-05-11T065452543-1446244215.jpg" alt="Bandung" /></div>
+        <div class="title">Bandung</div>
+      </li>
+      <li>
+        <div class="icon"><img src="https://asset.kompas.com/crops/gFAsyHomTmd4XXrv_HE_fn6l6wg=/0x0:750x500/750x500/data/photo/2023/10/09/6523d0320ca3a.jpg" alt="Surabaya" /></div>
+        <div class="title">Surabaya</div>
+      </li>
+    </ol>
+    <div class="separator"></div>
+
+    <div class="container">
+      <div class="form-container">
+        <h2>Form Pembelian</h2>
+        <form id="dataForm">
+          <table>
+            <tr>
+              <td>Nama Pembeli</td>
+              <td>:</td>
+              <td><input id="name" class="a" type="text" placeholder="Name" required /></td>
+            </tr>
+            <tr>
+              <td>Nomor HP</td>
+              <td>:</td>
+              <td><input id="hp" class="a" type="text" placeholder="Nomor HP" pattern="[0-9]*" required /></td>
+            </tr>
+            <tr>
+              <td>Tanggal Pemesanan</td>
+              <td>:</td>
+              <td><input id="dob" class="a" type="date" placeholder="Date" required /></td>
+            </tr>
+            <tr>
+              <td>Warna</td>
+              <td>:</td>
+              <td>
+                <input type="radio" name="warna" id="biru" value="biru" required />
+                <label for="biru">Biru</label>
+                <input type="radio" name="warna" id="hitam" value="hitam" required />
+                <label for="hitam">Hitam</label>
+                <input type="radio" name="warna" id="silver" value="silver" required />
+                <label for="silver">Silver</label>
+              </td>
+            </tr>
+            <tr>
+              <td class="b">Alamat</td>
+              <td class="b">:</td>
+              <td><textarea id="message" class="d" cols="30" rows="10" required></textarea></td>
+            </tr>
+            <tr>
+              <td colspan="3"><input class="a" type="submit" value="Kirim" /></td>
+            </tr>
+          </table>
+        </form>
+      </div>
+      <div class="result-container" id="resultContainer">
+        <h2>Print</h2>
+        <div id="result"></div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

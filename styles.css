@@ -1,0 +1,240 @@
+* {
+  box-sizing: border-box;
+}
+
+.logo {
+  margin-bottom: 14px;
+  max-width: 100px;
+  height: auto;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid black;
+  padding: 16px 24px;
+}
+
+.header-wrapper > .menu {
+  display: flex;
+}
+
+.header-wrapper > .menu > button {
+  background-color: white;
+  padding: 8px 16px;
+  border: 1px solid gray;
+  cursor: pointer;
+  transition: 0.3s background-color ease-out;
+}
+
+.header-wrapper > .menu > button:hover {
+  background-color: gainsboro;
+}
+
+.header-wrapper > .menu > button:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.header-wrapper > .menu > button:last-child {
+  border-radius: 0 4px 4px 0;
+}
+
+.main-content {
+  padding: 56px;
+  border-bottom: 2px solid black;
+}
+
+.main-content .slideshow-container {
+  position: relative;
+  text-align: center; /* Center align the content */
+}
+
+.main-content .slideshow-wrapper {
+  display: flex;
+  justify-content: center; /* Center align the images horizontally */
+}
+
+.img-slideshow {
+  width: 100%;
+  height: auto;
+  max-width: 100%;
+  display: none;
+}
+
+.img-slideshow:first-of-type {
+  display: block;
+}
+
+.slideshow-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.slideshow-button:hover {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.slideshow-button:nth-of-type(1) {
+  left: 0;
+}
+
+.slideshow-button:nth-of-type(2) {
+  right: 0;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.form-container,
+.result-container {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 500px;
+}
+
+.result-container {
+  width: 100%;
+  max-width: 500px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+  }
+
+  .form-container,
+  .result-container {
+    width: 45%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .header-wrapper {
+    flex-direction: column;
+  }
+
+  .menu {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .logo {
+    margin-bottom: 14px;
+  }
+}
+
+.price-tag {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 5px 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+@import url("https://pro.fontawesome.com/releases/v6.0.0-beta1/css/all.css");
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  --color: rgba(30, 30, 30);
+  --bgColor: rgba(245, 245, 245);
+  min-height: 100vh;
+  display: grid;
+  align-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  font-family: "Exo 2", sans-serif;
+  color: var(--color);
+}
+
+h1 {
+  text-align: center;
+}
+
+ol {
+  width: min(60rem, 90%);
+  margin-inline: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  list-style: none;
+  counter-reset: stepnr;
+}
+
+ol li {
+  counter-increment: stepnr;
+  width: 18rem; /* Lebar setiap item */
+  aspect-ratio: 1; /* Mengatur rasio aspek agar gambar tidak terdistorsi */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: calc(var(--borderS) + 2rem);
+  position: relative;
+  text-align: center; /* Mengatur teks judul menjadi terpusat di tengah */
+}
+
+ol li::before,
+ol li::after {
+  inset: 0;
+  position: absolute;
+  border-radius: 50%;
+  border: var(--borderS) solid var(--bgColor);
+  line-height: 1.1;
+}
+
+ol li::after {
+  content: "";
+  filter: drop-shadow(-0.25rem 0.25rem 0.0675rem rgba(0, 0, 0, 0.75)) blur(5px);
+}
+
+ol li > * {
+  width: 1rem;
+}
+
+ol li .title {
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.icon {
+  width: 10rem; /* Lebar ikon */
+  height: 10rem; /* Tinggi ikon */
+  margin: 0 auto 1rem; /* Margin bawah untuk penyesuaian */
+  text-align: center;
+}
+
+.icon img {
+  border-radius: 50%; /* Membuat gambar lingkaran */
+  width: 100%; /* Mengisi ruang yang tersedia */
+  height: 100%; /* Mengisi ruang yang tersedia */
+  object-fit: cover; /* Mengatur agar gambar tidak terdistorsi */
+}
+.separator {
+  width: 100%;
+  border-top: 2px solid black;
+  margin-top: 20px; /* Adjust as needed */
+  margin-bottom: 20px; /* Adjust as needed */
+}
